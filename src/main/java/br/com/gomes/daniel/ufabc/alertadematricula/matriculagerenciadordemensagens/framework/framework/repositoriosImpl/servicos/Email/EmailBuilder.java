@@ -63,7 +63,7 @@ public class EmailBuilder {
         }
         String htmlPagina = IOUtils.toString(fis);
         htmlPagina = htmlPagina
-                .replace("*[UrlCancelamento]*", notificarCadastrado.getDestinatario())
+                .replace("*[UrlCancelamento]*", notificarCadastrado.getDisciplina().getIdentificadorUFABC())
                 .replace("*[NomeDisciplina]*", notificarCadastrado.getDisciplina().getNome());
         return htmlPagina;
     }
